@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chart</title>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+<div id="chartc" style="height: 370px; width: 100%;"></div>
+<script type="text/javascript">
+	
+	window.onload = function() {
+		var chart = new CanvasJS.Chart("chartc",{
+			theme: "light1",
+			animationEnabled: false,
+			title:{
+				text: "錢金總成績"
+
+			},
+			data:[
+			{
+				type: "line",
+				dataPoints: [
+				{ label: "國", y: 20},
+				{ label: "英", y: 88},
+				{ label: "數", y: 90},
+				{ label: "社", y: 70},
+				{ label: "自", y: 100}
+
+				]
+
+			}
+		    ]
+		});
+		chart.render();
+		
+	}
+</script>
+</body>
+</html>
